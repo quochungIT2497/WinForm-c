@@ -95,15 +95,19 @@ namespace Bai3_winform
                 String CheckVl = "Declare @SDT int SELECT @SDT = COUNT(*) FROM KhachHang WHERE SDT = " + txt_SDTKH.Text +
                 " IF(@SDT > 0) Select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT = " + txt_SDTKH.Text +
                 " Else Insert Into KhachHang Values('" + txt_MaKH.Text + "','" + txt_TenCty.Text + "','" + txt_Dchi.Text
-                    + "','" + txt_ThanhPho.Text + "'," + txt_SDTKH.Text + ")";
-                //+ "Select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT =" + txt_SDTKH.Text;
+                    + "','" + txt_ThanhPho.Text + "'," + txt_SDTKH.Text + ")"
+                + "\nSelect MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang"; //where SDT =" + txt_SDTKH.Text;
                 SqlCommand cmdadd = new SqlCommand(CheckVl, conn);
                 DT.Clear();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmdadd);
                 adapter.Fill(DT);
                 dataGridView1.DataSource = DT;
                 conn.Close();
-                MessageBox.Show("Người dùng đã tồn tại", "Thông báo");
+                DialogResult ThemTC = MessageBox.Show("Thêm người dùng thành công", "Thông Báo", MessageBoxButtons.OK);
+                if (ThemTC == DialogResult.OK)
+                {
+
+                }
             }
             catch (SqlException ex)
             {
@@ -172,12 +176,14 @@ namespace Bai3_winform
         {
             Form7 Xoa = new Form7();
             Xoa.ShowDialog();
+            Xoa.Location = this.Location;
         }
 
         private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form6 TimKiem = new Form6();
             TimKiem.ShowDialog();
+            TimKiem.Location = this.Location;
         }
     }
 }
