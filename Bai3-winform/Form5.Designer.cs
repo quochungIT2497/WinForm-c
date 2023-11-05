@@ -30,7 +30,6 @@
         {
             dataGridView1 = new DataGridView();
             groupBox1 = new GroupBox();
-            btn_TK = new Button();
             btn_Thoát = new Button();
             lbl_SDTKH = new Label();
             txt_SDTKH = new TextBox();
@@ -42,16 +41,21 @@
             lbl_DChi = new Label();
             txt_TenCty = new TextBox();
             lbl_TenCty = new Label();
-            btn_Xoa = new Button();
             txt_MaKH = new TextBox();
             lbl_MaKH = new Label();
+            menuStrip1 = new MenuStrip();
+            chứcNăngToolStripMenuItem = new ToolStripMenuItem();
+            tìmKiếmToolStripMenuItem = new ToolStripMenuItem();
+            xóaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(60, 29);
+            dataGridView1.Location = new Point(0, 38);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(650, 163);
@@ -59,26 +63,17 @@
             // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(60, 12);
+            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Location = new Point(63, 27);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(650, 180);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin";
             // 
-            // btn_TK
-            // 
-            btn_TK.Location = new Point(147, 377);
-            btn_TK.Name = "btn_TK";
-            btn_TK.Size = new Size(75, 23);
-            btn_TK.TabIndex = 2;
-            btn_TK.Text = "Tìm Kiếm";
-            btn_TK.UseVisualStyleBackColor = true;
-            btn_TK.Click += btn_TK_Click;
-            // 
             // btn_Thoát
             // 
-            btn_Thoát.Location = new Point(339, 415);
+            btn_Thoát.Location = new Point(350, 382);
             btn_Thoát.Name = "btn_Thoát";
             btn_Thoát.Size = new Size(75, 23);
             btn_Thoát.TabIndex = 3;
@@ -105,7 +100,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(273, 377);
+            button1.Location = new Point(269, 353);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 6;
@@ -115,7 +110,7 @@
             // 
             // btn_Sua
             // 
-            btn_Sua.Location = new Point(416, 377);
+            btn_Sua.Location = new Point(429, 353);
             btn_Sua.Name = "btn_Sua";
             btn_Sua.Size = new Size(75, 23);
             btn_Sua.TabIndex = 7;
@@ -174,16 +169,6 @@
             lbl_TenCty.TabIndex = 12;
             lbl_TenCty.Text = "Tên Công Ty";
             // 
-            // btn_Xoa
-            // 
-            btn_Xoa.Location = new Point(554, 377);
-            btn_Xoa.Name = "btn_Xoa";
-            btn_Xoa.Size = new Size(75, 23);
-            btn_Xoa.TabIndex = 14;
-            btn_Xoa.Text = "Xoá";
-            btn_Xoa.UseVisualStyleBackColor = true;
-            btn_Xoa.Click += btn_Xoa_Click;
-            // 
             // txt_MaKH
             // 
             txt_MaKH.Location = new Point(350, 219);
@@ -201,14 +186,45 @@
             lbl_MaKH.TabIndex = 15;
             lbl_MaKH.Text = "Mã KH";
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { chứcNăngToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(805, 24);
+            menuStrip1.TabIndex = 17;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // chứcNăngToolStripMenuItem
+            // 
+            chứcNăngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tìmKiếmToolStripMenuItem, xóaToolStripMenuItem });
+            chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
+            chứcNăngToolStripMenuItem.Size = new Size(79, 20);
+            chứcNăngToolStripMenuItem.Text = "Chức Năng";
+            // 
+            // tìmKiếmToolStripMenuItem
+            // 
+            tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            tìmKiếmToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.F;
+            tìmKiếmToolStripMenuItem.Size = new Size(180, 22);
+            tìmKiếmToolStripMenuItem.Text = "Tìm Kiếm";
+            tìmKiếmToolStripMenuItem.Click += tìmKiếmToolStripMenuItem_Click;
+            // 
+            // xóaToolStripMenuItem
+            // 
+            xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            xóaToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Alt | Keys.D;
+            xóaToolStripMenuItem.Size = new Size(180, 22);
+            xóaToolStripMenuItem.Text = "Xóa";
+            xóaToolStripMenuItem.Click += xóaToolStripMenuItem_Click;
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(805, 417);
             Controls.Add(txt_MaKH);
             Controls.Add(lbl_MaKH);
-            Controls.Add(btn_Xoa);
             Controls.Add(txt_TenCty);
             Controls.Add(lbl_TenCty);
             Controls.Add(txt_Dchi);
@@ -220,13 +236,15 @@
             Controls.Add(txt_SDTKH);
             Controls.Add(lbl_SDTKH);
             Controls.Add(btn_Thoát);
-            Controls.Add(btn_TK);
-            Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
+            Controls.Add(menuStrip1);
             Name = "Form5";
             Text = "Bai CSDL";
             Load += Form5_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -235,7 +253,6 @@
 
         private DataGridView dataGridView1;
         private GroupBox groupBox1;
-        private Button btn_TK;
         private Button btn_Thoát;
         private Label lbl_SDTKH;
         private TextBox txt_SDTKH;
@@ -247,8 +264,11 @@
         private Label lbl_DChi;
         private TextBox txt_TenCty;
         private Label lbl_TenCty;
-        private Button btn_Xoa;
         private TextBox txt_MaKH;
         private Label lbl_MaKH;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem chứcNăngToolStripMenuItem;
+        private ToolStripMenuItem tìmKiếmToolStripMenuItem;
+        private ToolStripMenuItem xóaToolStripMenuItem;
     }
 }

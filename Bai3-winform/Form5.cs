@@ -52,36 +52,38 @@ namespace Bai3_winform
 
         private void btn_TK_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                conn.Open();
-                String Query = "select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang";
-                String QuerySDT = "select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT like" + "'%_" + txt_SDTKH.Text + "' or MaKH = '" + txt_MaKH.Text + "'";
-                SqlCommand cmd = new SqlCommand(QuerySDT, conn);
-                SqlCommand QA = new SqlCommand(Query, conn);
-                DT.Clear();
-                if(txt_MaKH.Text != "" || txt_SDTKH.Text != "")
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    adapter.Fill(DT);
-                    dataGridView1.DataSource = DT;
-                }
-                else
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(QA);
-                    adapter.Fill(DT);
-                    dataGridView1.DataSource = DT;
-                }
-            }
-            catch (SqlException ex)
-            {
-                DialogResult error = MessageBox.Show("Không tìm thấy người dùng","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                if (error == DialogResult.OK)
-                {
+            /*try
+              {
+                  SqlConnection conn = new SqlConnection(ConnectionString);
+                  conn.Open();
+                  String Query = "select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang";
+                  String QuerySDT = "select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT like" + "'%_" + txt_SDTKH.Text + "' or MaKH = '" + txt_MaKH.Text + "'";
+                  SqlCommand cmd = new SqlCommand(QuerySDT, conn);
+                  SqlCommand QA = new SqlCommand(Query, conn);
+                  DT.Clear();
+                  if(txt_MaKH.Text != "" || txt_SDTKH.Text != "")
+                  {
+                      SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                      adapter.Fill(DT);
+                      dataGridView1.DataSource = DT;
+                  }
+                  else
+                  {
+                      SqlDataAdapter adapter = new SqlDataAdapter(QA);
+                      adapter.Fill(DT);
+                      dataGridView1.DataSource = DT;
+                  }
+              }
+              catch (SqlException ex)
+              {
+                  DialogResult error = MessageBox.Show("Không tìm thấy người dùng","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                  if (error == DialogResult.OK)
+                  {
 
-                }
-            }
+                  }
+              }
+            Form6 f52 = new Form6();
+            f52.ShowDialog(); */
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,8 +95,8 @@ namespace Bai3_winform
                 String CheckVl = "Declare @SDT int SELECT @SDT = COUNT(*) FROM KhachHang WHERE SDT = " + txt_SDTKH.Text +
                 " IF(@SDT > 0) Select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT = " + txt_SDTKH.Text +
                 " Else Insert Into KhachHang Values('" + txt_MaKH.Text + "','" + txt_TenCty.Text + "','" + txt_Dchi.Text
-                    + "','" + txt_ThanhPho.Text + "'," + txt_SDTKH.Text + ")" +
-                    "Select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT =" + txt_SDTKH.Text;
+                    + "','" + txt_ThanhPho.Text + "'," + txt_SDTKH.Text + ")";
+                //+ "Select MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where SDT =" + txt_SDTKH.Text;
                 SqlCommand cmdadd = new SqlCommand(CheckVl, conn);
                 DT.Clear();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmdadd);
@@ -117,7 +119,7 @@ namespace Bai3_winform
                 conn.Open();
                 String SuaKH = "UPDATE KhachHang set TenCty = '" + txt_TenCty.Text + "', DiaChi = '" + txt_Dchi.Text + "',ThanhPho = '" + txt_ThanhPho.Text
                     + "', SDT=" + txt_SDTKH.Text + " Where MaKH= '" + txt_MaKH.Text + "' or SDT=" + txt_SDTKH.Text
-                    + "\nSelect MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang where MaKH ='" + txt_MaKH.Text + "'";
+                    + "\nSelect MaKH as [Mã Khách Hàng],TenCty as [Tên Công Ty], DiaChi as [Địa chỉ], ThanhPho as [Thành Phố], SDT as [Số Điện Thoại] from KhachHang"; //where MaKH ='" + txt_MaKH.Text + "'";
                 SqlCommand cmdSua = new SqlCommand(SuaKH, conn);
                 DT.Clear();
                 SqlDataAdapter Adapter = new SqlDataAdapter(cmdSua);
@@ -128,7 +130,7 @@ namespace Bai3_winform
             }
             catch (SqlException ex)
             {
-                DialogResult loi = MessageBox.Show("Sửa Thất Bại!", "Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                DialogResult loi = MessageBox.Show("Sửa Thất Bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (loi == DialogResult.OK)
                 {
                     //Chỉ đóng dialogresult
@@ -138,31 +140,44 @@ namespace Bai3_winform
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                conn.Open();
-                String XoaKH = "Delete from KhachHang where MaKH = '" + txt_MaKH.Text + "' or SDT=" + txt_SDTKH.Text;
-                SqlCommand cmdXoa = new SqlCommand(XoaKH, conn);
-                DT.Clear();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmdXoa);
-                adapter.Fill(DT);
-                dataGridView1.DataSource = adapter;
-                conn.Close();
-                DialogResult TC = MessageBox.Show("Xoá thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (TC == DialogResult.OK)
-                {
+            /*try
+              {
+                  SqlConnection conn = new SqlConnection(ConnectionString);
+                  conn.Open();
+                  String XoaKH = "Delete from KhachHang where MaKH = '" + txt_MaKH.Text + "' or SDT=" + txt_SDTKH.Text;
+                  SqlCommand cmdXoa = new SqlCommand(XoaKH, conn);
+                  DT.Clear();
+                  SqlDataAdapter adapter = new SqlDataAdapter(cmdXoa);
+                  adapter.Fill(DT);
+                  dataGridView1.DataSource = adapter;
+                  conn.Close();
+                  DialogResult TC = MessageBox.Show("Xoá thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  if (TC == DialogResult.OK)
+                  {
 
-                }
-            }
-            catch(SqlException ex)
-            {
-                DialogResult TB = MessageBox.Show("Xoá thông tin thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (TB == DialogResult.OK)
-                {
+                  }
+              }
+              catch (SqlException ex)
+              {
+                  DialogResult TB = MessageBox.Show("Xoá thông tin thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  if (TB == DialogResult.OK)
+                  {
 
-                }
-            }
+                  }
+              }*/
+        }
+
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 Xoa = new Form7();
+            Xoa.ShowDialog();
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 TimKiem = new Form6();
+            TimKiem.ShowDialog();
         }
     }
 }

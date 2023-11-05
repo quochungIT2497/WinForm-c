@@ -66,3 +66,5 @@ D:\SITC\C# winform\Bai-winform\Bai3-winform\obj\Debug\net6.0-windows\refint\Bai-
 D:\SITC\C# winform\Bai-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai-winform.pdb
 D:\SITC\C# winform\Bai-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai-winform.genruntimeconfig.cache
 D:\SITC\C# winform\Bai-winform\Bai3-winform\obj\Debug\net6.0-windows\ref\Bai-winform.dll
+D:\SITC\C# winform\Bai-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Form6.resources
+D:\SITC\C# winform\Bai-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Form7.resources
