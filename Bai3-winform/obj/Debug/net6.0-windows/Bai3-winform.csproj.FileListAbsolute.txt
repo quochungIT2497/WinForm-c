@@ -1,0 +1,41 @@
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.csproj.AssemblyReference.cache
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Form1.resources
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.csproj.GenerateResource.cache
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.GeneratedMSBuildEditorConfig.editorconfig
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.AssemblyInfoInputs.cache
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.AssemblyInfo.cs
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.csproj.CoreCompileInputs.cache
+D:\ton\Bai3-winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.exe
+D:\ton\Bai3-winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.deps.json
+D:\ton\Bai3-winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.runtimeconfig.json
+D:\ton\Bai3-winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.dll
+D:\ton\Bai3-winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.pdb
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.dll
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\refint\Bai3-winform.dll
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.pdb
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.genruntimeconfig.cache
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\ref\Bai3-winform.dll
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Form2.resources
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Properties.Resources.resources
+D:\ton\Bai3-winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Form3.resources
+D:\SITC\C# winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.exe
+D:\SITC\C# winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.deps.json
+D:\SITC\C# winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.runtimeconfig.json
+D:\SITC\C# winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.dll
+D:\SITC\C# winform\Bai3-winform\bin\Debug\net6.0-windows\Bai3-winform.pdb
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.csproj.AssemblyReference.cache
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Properties.Resources.resources
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.csproj.GenerateResource.cache
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.GeneratedMSBuildEditorConfig.editorconfig
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.AssemblyInfoInputs.cache
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.AssemblyInfo.cs
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.csproj.CoreCompileInputs.cache
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.dll
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\refint\Bai3-winform.dll
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.pdb
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3-winform.genruntimeconfig.cache
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\ref\Bai3-winform.dll
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Bai3.resources
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Bai4.resources
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Bai5.resources
+D:\SITC\C# winform\Bai3-winform\obj\Debug\net6.0-windows\Bai3_winform.Bai6.resources
